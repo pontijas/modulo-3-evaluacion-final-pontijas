@@ -1,11 +1,11 @@
 import React from 'react';
-import Character from './Character';
+import CharacterList from './CharacterList';
 import '../stylesheets/App.scss';
 
 function App() {
   return (
     <div className="App">
-      <Character />
+      <CharacterList />
     </div>
   );
 }
