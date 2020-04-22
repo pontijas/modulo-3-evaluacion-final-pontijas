@@ -2,7 +2,7 @@ import React from 'react';
 import Character from './Character';
 import '../stylesheets/App.scss';
 
-function CharacterList() {
+const CharacterList = () => {
   return (
     <div>
       <ul>
@@ -10,6 +10,6 @@ function CharacterList() {
       </ul>
     </div>
   );
-}
+};
 
 export default CharacterList;

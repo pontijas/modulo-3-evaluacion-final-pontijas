@@ -1,7 +1,7 @@
 import React from 'react';
 import '../stylesheets/App.scss';
 
-function Filter() {
+const Filter = () => {
   return (
     <section>
       <form>
@@ -9,6 +9,6 @@ function Filter() {
       </form>
     </section>
   );
-}
+};
 
 export default Filter;

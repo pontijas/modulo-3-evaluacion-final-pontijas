@@ -1,7 +1,7 @@
 import React from 'react';
 import '../stylesheets/App.scss';
 
-function Character() {
+const Character = () => {
   return (
     <div>
       <img src="https://via.placeholder.com/150"></img>
@@ -9,6 +9,6 @@ function Character() {
       <small>species</small>
     </div>
   );
-}
+};
 
 export default Character;
