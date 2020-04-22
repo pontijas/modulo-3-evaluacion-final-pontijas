@@ -4,7 +4,7 @@ import '../stylesheets/App.scss';
 
 function CharacterList() {
   return (
-    <div className="App">
+    <div>
       <ul>
         <Character />
       </ul>
