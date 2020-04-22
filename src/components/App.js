@@ -1,10 +1,11 @@
 import React from 'react';
+import Character from './Character';
 import '../stylesheets/App.scss';
 
 function App() {
   return (
     <div className="App">
-      <ul>Holi Mundi</ul>
+      <Character />
     </div>
   );
 }
