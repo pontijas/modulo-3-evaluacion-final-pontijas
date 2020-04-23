@@ -35,6 +35,7 @@
     display: flex;
     flex-flow: row wrap;
     list-style: none;
+    padding-bottom: 2rem;
   }
   &__item {
     margin: 0.5rem;
@@ -79,7 +80,7 @@
   &__input {
     font-family: $mainFont;
     padding: 0.5rem 1rem;
-    width: 11.5rem;
+    width: 11rem;
     height: 1.2rem;
     border-radius: 1rem;
     border: none;
@@ -90,12 +91,14 @@
   &__container {
     height: 20vh;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
   }
   &__title {
     text-transform: capitalize;
+    padding-bottom: 0.5rem;
   }
   &__credits {
     color: $darkGreen;

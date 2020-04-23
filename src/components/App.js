@@ -27,7 +27,7 @@ const App = () => {
       <header className="header__container">
         <img src={logo} alt="Rick y Morty" className="header__logo"></img>
       </header>
-      <main>
+      <main className="main__container">
         <Filter handleFilter={handleFilter} />
         <CharacterList characters={filteredCharacters} />
       </main>
