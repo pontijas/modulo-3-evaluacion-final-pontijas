@@ -3,8 +3,6 @@ import Character from './Character';
 import '../stylesheets/App.scss';
 
 const CharacterList = (props) => {
-  // console.log('recibo esto en CharacterList', props.characters);
-
   const charactersInfo = props.characters.map((character) => {
     return (
       <li key={character.id} className="list__item">
