@@ -9,6 +9,7 @@ const App = () => {
   useEffect(() => {
     getDataFromApi().then((data) => console.log('data', data));
   });
+
   return (
     <div className="App__container">
       <header className="header__container">
