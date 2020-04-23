@@ -1,5 +1,9 @@
 @import './core/_variables';
 
+* {
+  margin: 0;
+}
+
 .App {
   &__container {
     height: 100vh;
@@ -59,7 +63,7 @@
   &__input {
     font-family: $mainFont;
     padding: 0.5rem 1rem;
-    width: 12rem;
+    width: 10.5rem;
     height: 1.2rem;
     border-radius: 1rem;
     border: none;

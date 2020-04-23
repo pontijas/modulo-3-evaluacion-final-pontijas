@@ -5,12 +5,9 @@ import getDataFromApi from '../services/getDataFromApi';
 import logo from '../images/logo.png';
 import '../stylesheets/App.scss';
 
-console.log(getDataFromApi());
-
 const App = () => {
   useEffect(() => {
-    console.log('im coming baby');
-    getDataFromApi();
+    getDataFromApi().then((data) => console.log('data', data));
   });
   return (
     <div className="App__container">
