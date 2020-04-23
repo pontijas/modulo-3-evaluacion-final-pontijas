@@ -7,14 +7,22 @@ import '../stylesheets/App.scss';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
+  const [nameFilter, setNameFilter] = useState('');
+  // console.log('name filter', nameFilter);
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
   const handleFilter = (data) => {
-    console.log('data', data);
+    setNameFilter(data.value);
   };
+
+  const filteredCharacters = characters.filter((character) => {
+    // console.log(character.name.includes(nameFilter));
+
+    return character.name.includes(nameFilter);
+  });
 
   return (
     <div className="App__container">
@@ -23,7 +31,7 @@ const App = () => {
       </header>
       <main>
         <Filter handleFilter={handleFilter} />
-        <CharacterList characters={characters} />
+        <CharacterList characters={filteredCharacters} />
       </main>
     </div>
   );
