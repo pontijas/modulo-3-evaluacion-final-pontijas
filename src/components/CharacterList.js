@@ -5,15 +5,16 @@ import '../stylesheets/App.scss';
 const CharacterList = (props) => {
   console.log('recibo esto', props.characters);
 
-  const charactersInfo = props.characters.map((character) => {
-    console.log('ei');
+  const charactersInfo = props.characters.map((character, index) => {
+    console.log('ei', index);
 
-    return 123;
+    return <li key={index}>123</li>;
   });
 
   return (
     <div>
       <ul>
+        {charactersInfo}
         <Character />
       </ul>
     </div>
