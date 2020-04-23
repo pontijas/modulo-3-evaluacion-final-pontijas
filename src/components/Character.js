@@ -3,10 +3,12 @@ import '../stylesheets/App.scss';
 
 const Character = () => {
   return (
-    <section className="Card__container">
+    <section className="card__container">
       <img src="https://via.placeholder.com/150" alt="character"></img>
-      <h2>name</h2>
-      <small>species</small>
+      <small className="card__info">
+        <h2>name</h2>
+        <h3>species</h3>
+      </small>
     </section>
   );
 };
