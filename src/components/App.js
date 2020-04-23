@@ -12,8 +12,8 @@ const App = () => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
-  const handleFilter = () => {
-    console.log('lifting alone');
+  const handleFilter = (data) => {
+    console.log('data', data);
   };
 
   return (

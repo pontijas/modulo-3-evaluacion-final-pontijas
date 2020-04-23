@@ -4,8 +4,11 @@ import '../stylesheets/App.scss';
 const Filter = (props) => {
   // console.log('recibo esto en filter', props.handleFilter);
   const handleChange = (ev) => {
-    console.log(ev.type, ev.target.value);
-    props.handleFilter();
+    // console.log(ev.type, ev.target.value);
+    props.handleFilter({
+      value: ev.target.value,
+      key: 'name',
+    });
   };
 
   return (
