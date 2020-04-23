@@ -3,22 +3,19 @@ import Character from './Character';
 import '../stylesheets/App.scss';
 
 const CharacterList = (props) => {
-  console.log('recibo esto', props.characters);
+  // console.log('recibo esto en CharacterList', props.characters);
 
-  const charactersInfo = props.characters.map((character, index) => {
+  const charactersInfo = props.characters.map((character) => {
     return (
-      <li key={index} className="list__item">
-        <Character />
+      <li key={character.id} className="list__item">
+        <Character character={character} />
       </li>
     );
   });
 
   return (
     <div>
-      <ul className="list__container">
-        {charactersInfo}
-        {/* <Character /> */}
-      </ul>
+      <ul className="list__container">{charactersInfo}</ul>
     </div>
   );
 };
