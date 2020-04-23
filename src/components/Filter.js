@@ -5,6 +5,7 @@ const Filter = () => {
   return (
     <section>
       <form>
+        <label>Filtrar por nombre</label>
         <input type="text"></input>
       </form>
     </section>
