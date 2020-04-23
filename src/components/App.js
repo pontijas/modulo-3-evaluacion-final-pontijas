@@ -12,8 +12,6 @@ const App = () => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
-  console.log(characters);
-
   return (
     <div className="App__container">
       <header className="header__container">
@@ -21,7 +19,7 @@ const App = () => {
       </header>
       <main>
         <Filter />
-        <CharacterList />
+        <CharacterList characters={characters} />
       </main>
     </div>
   );
