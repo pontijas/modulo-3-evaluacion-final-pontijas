@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import CharacterList from './CharacterList';
 import Filter from './Filter';
 import getDataFromApi from '../services/getDataFromApi';
@@ -6,9 +6,13 @@ import logo from '../images/logo.png';
 import '../stylesheets/App.scss';
 
 const App = () => {
+  const [characters, setCharacters] = useState([]);
+
   useEffect(() => {
-    getDataFromApi().then((data) => console.log('data', data));
-  });
+    getDataFromApi().then((data) => setCharacters(data));
+  }, []);
+
+  console.log(characters);
 
   return (
     <div className="App__container">
