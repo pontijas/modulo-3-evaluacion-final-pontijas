@@ -12,13 +12,17 @@ const App = () => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
+  const handleFilter = () => {
+    console.log('lifting alone');
+  };
+
   return (
     <div className="App__container">
       <header className="header__container">
         <img src={logo} alt="Rick y Morty" className="header__logo"></img>
       </header>
       <main>
-        <Filter />
+        <Filter handleFilter={handleFilter} />
         <CharacterList characters={characters} />
       </main>
     </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 import '../stylesheets/App.scss';
 
-const Filter = () => {
+const Filter = (props) => {
+  // console.log('recibo esto en filter', props.handleFilter);
   const handleChange = (ev) => {
     console.log(ev.type, ev.target.value);
+    props.handleFilter();
   };
 
   return (
