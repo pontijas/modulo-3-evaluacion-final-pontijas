@@ -6,17 +6,20 @@
 
 .App {
   &__container {
-    height: 100vh;
     background-image: url('../images/bg-pickle-2.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-color: $lightGreen;
     font-family: $mainFont;
   }
 }
 
 .header {
   &__container {
+    background-image: url('../images/bg-portal-3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    border-bottom: 0.2rem solid $blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,18 +45,20 @@
 .card {
   &__container {
     padding: 1rem 0.5rem;
-    width: 12rem;
+    height: 15rem;
+    width: 10rem;
     background-color: rgba(40, 148, 18, 0.4);
     border: 0.4rem solid $blue;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: space-evenly;
   }
   &__info {
     width: 100%;
+    padding-top: 1.5rem;
     padding-left: 1rem;
+    color: $darkGreen;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -68,13 +73,15 @@
     align-items: flex-start;
   }
   &__label {
+    color: $darkGreen;
     font-size: 1.5rem;
+    font-weight: bold;
     padding: 0.5rem 0;
   }
   &__input {
     font-family: $mainFont;
     padding: 0.5rem 1rem;
-    width: 10.5rem;
+    width: 11.5rem;
     height: 1.2rem;
     border-radius: 1rem;
     border: none;

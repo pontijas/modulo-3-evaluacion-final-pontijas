@@ -6,10 +6,10 @@ const Character = (props) => {
 
   return (
     <section className="card__container">
-      <img src="https://via.placeholder.com/150" alt="character"></img>
+      <img src={props.character.image} alt="character" height="150px"></img>
       <small className="card__info">
-        <h2>n</h2>
-        <h3>species</h3>
+        <h2>{props.character.name}</h2>
+        <h3>{props.character.species}</h3>
       </small>
     </section>
   );
