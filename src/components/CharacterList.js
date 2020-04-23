@@ -6,16 +6,18 @@ const CharacterList = (props) => {
   console.log('recibo esto', props.characters);
 
   const charactersInfo = props.characters.map((character, index) => {
-    console.log('ei', index);
-
-    return <li key={index}>123</li>;
+    return (
+      <li key={index} className="list__item">
+        <Character />
+      </li>
+    );
   });
 
   return (
     <div>
-      <ul>
+      <ul className="list__container">
         {charactersInfo}
-        <Character />
+        {/* <Character /> */}
       </ul>
     </div>
   );
