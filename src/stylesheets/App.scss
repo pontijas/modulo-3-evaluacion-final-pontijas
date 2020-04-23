@@ -8,7 +8,6 @@
   &__container {
     background-image: url('../images/bg-pickle-2.png');
     background-repeat: repeat;
-    background-color: $lightGreen;
     font-family: $mainFont;
   }
 }
@@ -45,7 +44,7 @@
 .card {
   &__container {
     padding: 1rem 0.5rem;
-    height: 15rem;
+    height: 16rem;
     width: 10rem;
     background-color: rgba(40, 148, 18, 0.4);
     border: 0.35rem solid $lightGreen;
@@ -55,7 +54,6 @@
     align-items: center;
   }
   &__info {
-    width: 100%;
     padding-top: 1.5rem;
     padding-left: 1rem;
     color: $darkGreen;
@@ -85,5 +83,22 @@
     height: 1.2rem;
     border-radius: 1rem;
     border: none;
+  }
+}
+
+.footer {
+  &__container {
+    height: 20vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    text-transform: capitalize;
+  }
+  &__credits {
+    color: $darkGreen;
+    text-transform: capitalize;
   }
 }

@@ -19,9 +19,7 @@ const App = () => {
   };
 
   const filteredCharacters = characters.filter((character) => {
-    // console.log(character.name.includes(nameFilter));
-
-    return character.name.includes(nameFilter);
+    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
   return (
@@ -33,6 +31,10 @@ const App = () => {
         <Filter handleFilter={handleFilter} />
         <CharacterList characters={filteredCharacters} />
       </main>
+      <footer className="footer__container">
+        <h4 className="footer__title">cristina pontijas</h4>
+        <small className="footer__credits">Evaluación Final</small>
+      </footer>
     </div>
   );
 };
