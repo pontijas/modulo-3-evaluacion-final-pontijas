@@ -1,0 +1,23 @@
+.App {
+  &__container {
+    height: 100vh;
+    background-image: url('../images/bg-pickle-2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    padding: 1.5rem 0;
+    // background-color: rgba(43, 255, 0, 0.4);
+  }
+  &__logo {
+    height: 7rem;
+  }
+}
