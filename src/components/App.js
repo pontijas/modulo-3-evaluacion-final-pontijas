@@ -47,7 +47,7 @@ const App = () => {
       <header className="header__container" id="header">
         <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
       </header>
-      <main>
+      <main className="main__container">
         <Filter handleFilter={handleFilter} />
         <CharacterList characters={filteredCharacters} />
         <Switch>
@@ -55,8 +55,6 @@ const App = () => {
         </Switch>
       </main>
       <footer className="footer__container">
-        {/* <h4 className="footer__title">cristina pontijas</h4>
-        <small className="footer__credits">Evaluación Final</small> */}
         <a className="footer__btn" href="#header">
           go to top
         </a>

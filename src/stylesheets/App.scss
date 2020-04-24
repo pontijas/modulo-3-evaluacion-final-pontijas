@@ -6,7 +6,6 @@
 
 .App {
   &__container {
-    // position: relative;
     background-image: url('../images/bg-pickle-2.png');
     background-repeat: repeat;
     font-family: $mainFont;
@@ -36,7 +35,7 @@
     display: flex;
     flex-flow: row wrap;
     list-style: none;
-    padding-bottom: 2rem;
+    padding: 0 3rem;
   }
   &__item {
     margin: 0.5rem;
@@ -48,9 +47,8 @@
     text-decoration: none;
   }
   &__container {
-    padding: 0 0.5rem;
-    height: 18rem;
-    width: 10rem;
+    height: 14rem;
+    width: 8rem;
     background-color: rgba(40, 148, 18, 0.4);
     border: 0.35rem solid $lightGreen;
     border-radius: 0.75rem;
@@ -63,12 +61,12 @@
     }
   }
   &__img {
-    width: 180px;
+    width: 8rem;
   }
   &__info {
     width: 100%;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     color: $darkGreen;
   }
 }
@@ -133,22 +131,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 1.5rem;
     padding-bottom: 2rem;
   }
   &__btn {
     text-decoration: none;
     text-transform: uppercase;
-    color: $lightGreen;
-    background-color: $darkGreen;
+    font-weight: bold;
+    background-color: $blue;
+    border: 0.2rem solid $darkGreen;
+    color: $darkGreen;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
+    &:hover {
+      color: $lightGreen;
+    }
   }
-  &__title {
-    text-transform: capitalize;
-    padding-bottom: 0.5rem;
+}
+
+// responsive
+
+@media all and (max-width: 320px) {
+  .header {
+    &__logo {
+      height: 4.5rem;
+    }
   }
-  &__credits {
-    color: $darkGreen;
-    text-transform: capitalize;
+  .list {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
   }
 }
