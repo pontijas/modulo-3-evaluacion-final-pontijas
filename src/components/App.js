@@ -10,7 +10,6 @@ import '../stylesheets/App.scss';
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
-  // console.log('name filter', nameFilter);
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
@@ -22,13 +21,24 @@ const App = () => {
 
   const filteredCharacters = characters.filter((character) => {
     // boolean
-    console.log(character.name.toUpperCase().includes(nameFilter.toUpperCase()));
+    // console.log(character.name.toUpperCase().includes(nameFilter.toUpperCase()));
 
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
   const renderModal = (props) => {
-    console.log('recibo esto modal', props);
+    const characterId = props.match.params.id;
+    // console.log('recibo esto id', props.match.params.id);
+    // console.log('characters', characters);
+    const foundCharacter = characters.find((item) => {
+      // console.log('character holiii', characters);
+      console.log('character ID', characterId);
+      console.log('bingo', item.id);
+
+      return item.id === characterId;
+    });
+    console.log('foundcharacter', foundCharacter);
+
     return <Modal />;
   };
 
@@ -37,12 +47,12 @@ const App = () => {
       <header className="header__container">
         <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
       </header>
-      <main className="main__container">
-        <Filter handleFilter={handleFilter} />
-        <CharacterList characters={filteredCharacters} />
+      <main>
         <Switch>
           <Route path="/character/:id" render={renderModal} />
         </Switch>
+        <Filter handleFilter={handleFilter} />
+        <CharacterList characters={filteredCharacters} />
       </main>
       <footer className="footer__container">
         <h4 className="footer__title">cristina pontijas</h4>

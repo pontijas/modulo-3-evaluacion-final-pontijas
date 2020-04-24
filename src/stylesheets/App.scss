@@ -6,6 +6,7 @@
 
 .App {
   &__container {
+    // position: relative;
     background-image: url('../images/bg-pickle-2.png');
     background-repeat: repeat;
     font-family: $mainFont;
@@ -47,8 +48,8 @@
     text-decoration: none;
   }
   &__container {
-    padding: 1rem 0.5rem;
-    height: 16rem;
+    padding: 0 0.5rem;
+    height: 18rem;
     width: 10rem;
     background-color: rgba(40, 148, 18, 0.4);
     border: 0.35rem solid $lightGreen;
@@ -56,12 +57,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     &:hover {
       border: 0.35rem solid $pickleGreen;
     }
   }
   &__img {
-    width: 100%;
+    width: 180px;
   }
   &__info {
     width: 100%;
@@ -95,8 +97,31 @@
 }
 
 .modal {
+  &__hidden {
+    display: none;
+  }
   &__container {
+    background-color: rgba(0, 247, 255, 0.4);
+  }
+  &__card {
+    position: fixed;
+    z-index: +5;
+    width: 80vw;
+    height: 50vh;
+    margin: 2rem 8rem;
+    padding: 1rem 1rem;
     border: 3px solid $purple;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue;
+    &__img {
+      // margin-right: 2rem;
+    }
+    &__info {
+      // margin: 2rem;
+    }
   }
 }
 
