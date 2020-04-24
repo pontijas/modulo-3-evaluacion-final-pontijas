@@ -16,10 +16,10 @@ const Modal = (props) => {
       <section className="modal__info">
         <img src="https://via.placeholder.com/200" alt="Character" title="Character image" />
         <ul>
-          <li>species</li>
-          <li>origin</li>
-          <li>status</li>
-          <li>episodes</li>
+          <li className="modal__list-item">specie: </li>
+          <li className="modal__list-item">origin: </li>
+          <li className="modal__list-item">status: </li>
+          <li className="modal__list-item">episodes: </li>
         </ul>
       </section>
     </div>

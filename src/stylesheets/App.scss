@@ -136,8 +136,12 @@
     align-items: center;
     justify-content: center;
     &__img {
-      // margin-right: 2rem;
+      // border: 0.3rem solid $blue;
     }
+  }
+  &__list-item {
+    list-style: none;
+    text-transform: capitalize;
   }
 }
 
