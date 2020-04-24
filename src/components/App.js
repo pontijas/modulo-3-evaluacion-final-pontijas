@@ -31,12 +31,12 @@ const App = () => {
     // console.log('holi match', props.match.params.id);
     // console.log('holi array', characters);
 
-    const matchCharacter = characters.find((charactersElement) => {
-      console.log(charactersElement.id);
-      return charactersElement.id === parseInt(matchId);
+    const matchCharacter = characters.find((character) => {
+      // console.log(charactersElement.id);
+      return character.id === parseInt(matchId);
     });
-    console.log('es un match', matchCharacter);
-    return <Modal />;
+    // console.log('es un match', matchCharacter);
+    return <Modal character={matchCharacter} />;
   };
 
   return (
