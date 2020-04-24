@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import CharacterList from './CharacterList';
 import Filter from './Filter';
+import Modal from './Modal';
 import getDataFromApi from '../services/getDataFromApi';
 import logo from '../images/logo.png';
 import '../stylesheets/App.scss';
@@ -25,6 +27,11 @@ const App = () => {
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
+  const renderModal = (props) => {
+    console.log('recibo esto modal', props);
+    return <Modal />;
+  };
+
   return (
     <div className="App__container">
       <header className="header__container">
@@ -33,6 +40,9 @@ const App = () => {
       <main className="main__container">
         <Filter handleFilter={handleFilter} />
         <CharacterList characters={filteredCharacters} />
+        <Switch>
+          <Route path="/character/:id" render={renderModal} />
+        </Switch>
       </main>
       <footer className="footer__container">
         <h4 className="footer__title">cristina pontijas</h4>
