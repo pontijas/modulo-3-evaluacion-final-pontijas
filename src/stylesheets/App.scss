@@ -18,7 +18,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    border-bottom: 0.2rem solid $lightGreen;
+    border-bottom: 0.2rem solid $green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
     height: 15rem;
     width: 9rem;
     background-color: rgba(40, 148, 18, 0.4);
-    border: 0.35rem solid $lightGreen;
+    border: 0.35rem solid $yellow;
     border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
@@ -110,15 +110,20 @@
   // }
   &__container {
     position: absolute;
-    background-color: $blue;
+    margin-top: 20%;
+    color: $darkGreen;
+    background-color: $yellow;
     box-shadow: 2px 2px 5px $darkGreen;
     border-radius: 0.2rem;
-    padding: 1.5rem 2rem;
+    padding: 3.5rem 5.5rem;
   }
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  &__title {
+    text-transform: capitalize;
   }
   &__link {
     text-decoration: none;
@@ -150,13 +155,14 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    background-color: $blue;
+    background-color: $yellow;
     border: 0.2rem solid $darkGreen;
     color: $darkGreen;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
+    transition: all 0.3;
     &:hover {
-      color: $lightGreen;
+      transform: scale(1.1);
     }
   }
 }

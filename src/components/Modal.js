@@ -8,7 +8,7 @@ const Modal = (props) => {
   return (
     <div className="modal__container">
       <div className="modal__header">
-        <h2>Name</h2>
+        <h2 className="modal__title">Name</h2>
         <Link to="/" className="modal__link">
           Go Back
         </Link>
