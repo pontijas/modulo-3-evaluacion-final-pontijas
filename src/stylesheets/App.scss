@@ -30,6 +30,14 @@
   }
 }
 
+.main {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .list {
   &__container {
     display: flex;
@@ -47,8 +55,8 @@
     text-decoration: none;
   }
   &__container {
-    height: 14rem;
-    width: 8rem;
+    height: 15rem;
+    width: 9rem;
     background-color: rgba(40, 148, 18, 0.4);
     border: 0.35rem solid $lightGreen;
     border-radius: 0.75rem;
@@ -61,13 +69,13 @@
     }
   }
   &__img {
-    width: 8rem;
+    width: 10rem;
   }
   &__info {
-    width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
     color: $darkGreen;
+    font-size: 0.9rem;
   }
 }
 
@@ -76,7 +84,7 @@
     padding: 2rem 3rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   &__label {
     color: $darkGreen;
@@ -103,23 +111,22 @@
   //   background-color: rgba(0, 247, 255, 0.4);
   // }
   &__card {
-    position: fixed;
+    // position: fixed;
     z-index: +5;
-    width: 80vw;
+    width: 60vw;
     height: 50vh;
-    margin: 2rem 8rem;
-    padding: 1rem 1rem;
-    border: 3px solid $purple;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: $blue;
+    box-shadow: 2px 2px 5px $darkGreen;
+    border-radius: 0.2rem;
     &__img {
       // margin-right: 2rem;
     }
     &__info {
-      // margin: 2rem;
+      //
     }
   }
 }

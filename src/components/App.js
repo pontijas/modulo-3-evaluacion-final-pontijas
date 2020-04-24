@@ -22,22 +22,11 @@ const App = () => {
   const filteredCharacters = characters.filter((character) => {
     // boolean
     // console.log(character.name.toUpperCase().includes(nameFilter.toUpperCase()));
-
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
   const renderModal = (props) => {
-    // const characterId = props.match.params.id;
-    // // console.log('recibo esto id', props.match.params.id);
-    // // console.log('characters', characters);
-    // const foundCharacter = characters.find((item) => {
-    //   // console.log('character holiii', characters);
-    //   console.log('character ID', characterId);
-    //   console.log('bingo', item.id);
-
-    //   return item.id === characterId;
-    // });
-    // console.log('foundcharacter', foundCharacter);
+    console.log('holi match', props.match.params.id);
 
     return <Modal />;
   };
