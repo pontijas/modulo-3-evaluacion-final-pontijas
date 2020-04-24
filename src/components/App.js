@@ -19,13 +19,16 @@ const App = () => {
   };
 
   const filteredCharacters = characters.filter((character) => {
+    // boolean
+    console.log(character.name.toUpperCase().includes(nameFilter.toUpperCase()));
+
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
   return (
     <div className="App__container">
       <header className="header__container">
-        <img src={logo} alt="Rick y Morty" className="header__logo"></img>
+        <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
       </header>
       <main className="main__container">
         <Filter handleFilter={handleFilter} />

@@ -55,12 +55,9 @@
     align-items: center;
   }
   &__info {
+    width: 100%;
     padding-top: 1.5rem;
-    padding-left: 1rem;
     color: $darkGreen;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
 }
 
