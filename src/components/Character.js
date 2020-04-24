@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../stylesheets/App.scss';
 
 const Character = (props) => {
   // console.log('recibo esto en caracter', props.character.id);
 
   return (
-    <section className="card__container">
-      <a href={`#/character/${props.character.id}`}>
-        <img src={props.character.image} alt={`Imagen de ${props.character.name}`} title={`Imagen de ${props.character.name}`} width="160px"></img>
-        <small className="card__info">
-          <h2>{props.character.name}</h2>
-          <h3>{props.character.species}</h3>
-        </small>
-      </a>
-    </section>
+    <Link to={`/character/${props.character.id}`} className="card__link">
+      <section className="card__container">
+        <img src={props.character.image} alt={`Imagen de ${props.character.name}`} title={`Imagen de ${props.character.name}`} className="card__img"></img>
+        <section className="card__info">
+          <h3>{props.character.name}</h3>
+          <p>{props.character.species}</p>
+        </section>
+      </section>
+    </Link>
   );
 };
 
