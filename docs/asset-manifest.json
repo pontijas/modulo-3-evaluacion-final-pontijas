@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.14f5f5dd.chunk.css",
+    "main.js": "/static/js/main.e61c20ff.chunk.js",
+    "main.js.map": "/static/js/main.e61c20ff.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2b0b8e08.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2b0b8e08.js.map",
+    "static/js/2.26c8f64e.chunk.js": "/static/js/2.26c8f64e.chunk.js",
+    "static/js/2.26c8f64e.chunk.js.map": "/static/js/2.26c8f64e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.323a85e8b417d51d17cc9aee22a9985f.js": "/precache-manifest.323a85e8b417d51d17cc9aee22a9985f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.14f5f5dd.chunk.css.map": "/static/css/main.14f5f5dd.chunk.css.map",
+    "static/js/2.26c8f64e.chunk.js.LICENSE.txt": "/static/js/2.26c8f64e.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/static/media/bg-portal-3.58351c5b.jpg",
+    "static/media/logo.png": "/static/media/logo.75509f2e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b0b8e08.js",
+    "static/js/2.26c8f64e.chunk.js",
+    "static/css/main.14f5f5dd.chunk.css",
+    "static/js/main.e61c20ff.chunk.js"
+  ]
+}
