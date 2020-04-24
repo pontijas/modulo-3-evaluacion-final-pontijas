@@ -48,11 +48,11 @@ const App = () => {
         <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
       </header>
       <main>
+        <Filter handleFilter={handleFilter} />
+        <CharacterList characters={filteredCharacters} />
         <Switch>
           <Route path="/character/:id" render={renderModal} />
         </Switch>
-        <Filter handleFilter={handleFilter} />
-        <CharacterList characters={filteredCharacters} />
       </main>
       <footer className="footer__container">
         <h4 className="footer__title">cristina pontijas</h4>

@@ -8,8 +8,15 @@ const Modal = () => {
         <section className="modal__card">
           <img src="https://via.placeholder.com/350" alt="Character" title="Character image" />
           <section className="modal__info">
-            <h2>Name</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eius quod commodi perspiciatis architecto nisi voluptas tempore, odio perferendis doloremque, quas illo inventore aspernatur corporis, alias expedita. Odio, exercitationem esse?</p>
+            <ul>
+              <li>
+                <h2>Name</h2>
+              </li>
+              <li>species</li>
+              <li>origin</li>
+              <li>status</li>
+              <li>episodes</li>
+            </ul>
           </section>
         </section>
       </div>

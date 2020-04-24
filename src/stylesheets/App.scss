@@ -97,12 +97,12 @@
 }
 
 .modal {
-  &__hidden {
-    display: none;
-  }
-  &__container {
-    background-color: rgba(0, 247, 255, 0.4);
-  }
+  // &__hidden {
+  //   display: none;
+  // }
+  // &__container {
+  //   background-color: rgba(0, 247, 255, 0.4);
+  // }
   &__card {
     position: fixed;
     z-index: +5;
