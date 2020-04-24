@@ -26,8 +26,16 @@ const App = () => {
   });
 
   const renderModal = (props) => {
-    console.log('holi match', props.match.params.id);
+    const matchId = props.match.params.id;
 
+    // console.log('holi match', props.match.params.id);
+    // console.log('holi array', characters);
+
+    const matchCharacter = characters.find((charactersElement) => {
+      console.log(charactersElement.id);
+      return charactersElement.id === parseInt(matchId);
+    });
+    console.log('es un match', matchCharacter);
     return <Modal />;
   };
 
