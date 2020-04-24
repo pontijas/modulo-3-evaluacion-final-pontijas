@@ -94,6 +94,12 @@
   }
 }
 
+.modal {
+  &__container {
+    border: 3px solid $purple;
+  }
+}
+
 .footer {
   &__container {
     height: 20vh;
