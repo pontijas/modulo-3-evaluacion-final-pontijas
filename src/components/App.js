@@ -27,24 +27,24 @@ const App = () => {
   });
 
   const renderModal = (props) => {
-    const characterId = props.match.params.id;
-    // console.log('recibo esto id', props.match.params.id);
-    // console.log('characters', characters);
-    const foundCharacter = characters.find((item) => {
-      // console.log('character holiii', characters);
-      console.log('character ID', characterId);
-      console.log('bingo', item.id);
+    // const characterId = props.match.params.id;
+    // // console.log('recibo esto id', props.match.params.id);
+    // // console.log('characters', characters);
+    // const foundCharacter = characters.find((item) => {
+    //   // console.log('character holiii', characters);
+    //   console.log('character ID', characterId);
+    //   console.log('bingo', item.id);
 
-      return item.id === characterId;
-    });
-    console.log('foundcharacter', foundCharacter);
+    //   return item.id === characterId;
+    // });
+    // console.log('foundcharacter', foundCharacter);
 
     return <Modal />;
   };
 
   return (
     <div className="App__container">
-      <header className="header__container">
+      <header className="header__container" id="header">
         <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
       </header>
       <main>
@@ -55,8 +55,11 @@ const App = () => {
         </Switch>
       </main>
       <footer className="footer__container">
-        <h4 className="footer__title">cristina pontijas</h4>
-        <small className="footer__credits">Evaluación Final</small>
+        {/* <h4 className="footer__title">cristina pontijas</h4>
+        <small className="footer__credits">Evaluación Final</small> */}
+        <a className="footer__btn" href="#header">
+          go to top
+        </a>
       </footer>
     </div>
   );

@@ -13,8 +13,8 @@ const Filter = (props) => {
 
   return (
     <form className="filter__container">
-      <label className="filter__label">Filtrar por nombre</label>
-      <input type="text" className="filter__input" placeholder="Nombre del personaje" onChange={handleChange}></input>
+      <label className="filter__label">Filter by name</label>
+      <input type="text" className="filter__input" placeholder="Character name" onChange={handleChange}></input>
     </form>
   );
 };

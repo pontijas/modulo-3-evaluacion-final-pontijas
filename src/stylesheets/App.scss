@@ -82,6 +82,7 @@
   }
   &__label {
     color: $darkGreen;
+    text-transform: capitalize;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0.5rem 0;
@@ -133,6 +134,14 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 2rem;
+  }
+  &__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $lightGreen;
+    background-color: $darkGreen;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
   }
   &__title {
     text-transform: capitalize;
