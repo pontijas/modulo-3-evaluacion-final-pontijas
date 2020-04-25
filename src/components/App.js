@@ -36,22 +36,24 @@ const App = () => {
   };
 
   return (
-    <div className="App__container">
-      <header className="header__container" id="header">
-        <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
-      </header>
-      <main className="main__container">
-        <Filter handleFilter={handleFilter} />
-        <CharacterList characters={filteredCharacters} />
-        <Switch>
-          <Route path="/character/:id" render={renderModal} />
-        </Switch>
-      </main>
-      <footer className="footer__container">
-        <a className="footer__btn" href="#header">
-          go to top
-        </a>
-      </footer>
+    <div>
+      <div className="App__container">
+        <header className="header__container" id="header">
+          <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
+        </header>
+        <main className="main__container">
+          <Filter handleFilter={handleFilter} />
+          <CharacterList characters={filteredCharacters} />
+          <Switch>
+            <Route path="/character/:id" render={renderModal} />
+          </Switch>
+        </main>
+        <footer className="footer__container">
+          <a className="footer__btn" href="#header">
+            go to top
+          </a>
+        </footer>
+      </div>
     </div>
   );
 };

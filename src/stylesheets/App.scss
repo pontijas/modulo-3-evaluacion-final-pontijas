@@ -106,6 +106,7 @@
 
 .modal {
   &__container {
+    font-family: $mainFont;
     position: fixed;
     color: $darkGreen;
     background-color: $yellow;
