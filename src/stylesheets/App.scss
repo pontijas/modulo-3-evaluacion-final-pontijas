@@ -120,7 +120,7 @@
   &__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   &__title {
     text-transform: capitalize;
@@ -135,9 +135,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    &__img {
-      // border: 0.3rem solid $blue;
-    }
+  }
+  &__img {
+    border: 0.3rem solid $blue;
+    border-radius: 0.5rem;
+  }
+  &__list {
+    width: 15rem;
   }
   &__list-item {
     list-style: none;

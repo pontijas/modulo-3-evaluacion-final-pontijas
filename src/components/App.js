@@ -35,8 +35,10 @@ const App = () => {
       // console.log(charactersElement.id);
       return character.id === parseInt(matchId);
     });
-    // console.log('es un match', matchCharacter);
-    return <Modal character={matchCharacter} />;
+    if (matchCharacter !== undefined) {
+      // console.log('es un match', matchCharacter);
+      return <Modal character={matchCharacter} />;
+    }
   };
 
   return (
