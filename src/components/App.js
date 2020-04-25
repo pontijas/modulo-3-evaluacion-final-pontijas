@@ -27,16 +27,10 @@ const App = () => {
 
   const renderModal = (props) => {
     const matchId = props.match.params.id;
-
-    // console.log('holi match', props.match.params.id);
-    // console.log('holi array', characters);
-
     const matchCharacter = characters.find((character) => {
-      // console.log(charactersElement.id);
       return character.id === parseInt(matchId);
     });
     if (matchCharacter !== undefined) {
-      // console.log('es un match', matchCharacter);
       return <Modal character={matchCharacter} />;
     }
   };
