@@ -16,6 +16,7 @@
   &__container {
     background-image: url('../images/bg-portal-3.jpg');
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-size: 100vw;
     border-bottom: 0.2rem solid $green;
@@ -24,6 +25,7 @@
     align-items: center;
     height: 20vh;
     padding: 1.5rem 0;
+    overflow: hidden;
   }
   &__logo {
     height: 4.5rem;
@@ -44,8 +46,8 @@
     list-style: none;
     padding: 0 3rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(20, 1fr);
   }
   &__item {
     margin: 0.5rem;
@@ -176,6 +178,16 @@
 }
 
 // responsive
+
+@media all and (min-width: 420px) {
+  .list {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+    }
+  }
+}
 
 @media all and (min-width: 768px) {
   .header {
