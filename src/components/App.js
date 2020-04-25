@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import CharacterList from './CharacterList';
 import Filter from './Filter';
-import Modal from './Modal';
+import CharacterDetail from './CharacterDetail';
 import getDataFromApi from '../services/getDataFromApi';
 import logo from '../images/logo.png';
 import '../stylesheets/App.scss';
@@ -20,6 +20,9 @@ const App = () => {
   };
 
   const filteredCharacters = characters.filter((character) => {
+    console.log(character);
+    console.log('filter', nameFilter);
+
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
@@ -29,7 +32,7 @@ const App = () => {
       return character.id === parseInt(matchId);
     });
     if (matchCharacter !== undefined) {
-      return <Modal character={matchCharacter} />;
+      return <CharacterDetail character={matchCharacter} />;
     }
   };
 

@@ -1,0 +1,30 @@
+@import './core/_variables';
+
+.card {
+  &__link {
+    text-decoration: none;
+  }
+  &__container {
+    height: 15rem;
+    width: 9rem;
+    background-color: rgba(40, 148, 18, 0.4);
+    border: 0.35rem solid $yellow;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    &:hover {
+      border: 0.35rem solid $pickleGreen;
+    }
+  }
+  &__img {
+    width: 10rem;
+  }
+  &__info {
+    padding: 1rem;
+    text-align: center;
+    color: $darkGreen;
+    font-size: 0.9rem;
+  }
+}

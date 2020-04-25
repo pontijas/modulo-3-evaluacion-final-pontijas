@@ -1,0 +1,45 @@
+@import './core/_variables';
+
+.modal {
+  &__container {
+    font-family: $mainFont;
+    position: fixed;
+    color: $darkGreen;
+    background-color: $yellow;
+    box-shadow: 5px 5px 5px $darkGreen;
+    border-radius: 0.2rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 0.2rem solid $blue;
+  }
+  &__title {
+    text-transform: capitalize;
+  }
+  &__link {
+    text-decoration: none;
+    font-weight: bold;
+    color: $blue;
+    padding-right: 0.5rem;
+  }
+  &__info {
+    width: 35rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    border: 0.2rem solid $blue;
+    height: 15rem;
+  }
+  &__list {
+    width: 15rem;
+  }
+  &__list-item {
+    list-style: none;
+    text-transform: capitalize;
+  }
+}

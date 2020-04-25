@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheets/App.scss';
+import '../stylesheets/CharacterDetail.scss';
 
-const Modal = (props) => {
+const CharacterDetail = (props) => {
   return (
     <div className="modal__container">
       <div className="modal__header">
@@ -24,4 +24,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default CharacterDetail;
