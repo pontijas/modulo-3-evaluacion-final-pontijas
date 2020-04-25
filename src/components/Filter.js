@@ -4,7 +4,7 @@ import '../stylesheets/App.scss';
 const Filter = (props) => {
   // console.log('recibo esto en filter', props.handleFilter);
   const handleChange = (ev) => {
-    // console.log(ev.type, ev.target.value);
+    console.log('target value', ev.target.value);
     ev.preventDefault();
     props.handleFilter({
       value: ev.target.value,

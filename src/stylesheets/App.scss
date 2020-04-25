@@ -105,40 +105,38 @@
 }
 
 .modal {
-  // &__hidden {
-  //   display: none;
-  // }
   &__container {
-    position: absolute;
-    margin-top: 20%;
+    position: fixed;
     color: $darkGreen;
     background-color: $yellow;
-    box-shadow: 2px 2px 5px $darkGreen;
+    box-shadow: 5px 5px 5px $darkGreen;
     border-radius: 0.2rem;
-    padding: 3.5rem 5.5rem;
   }
   &__header {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    border-bottom: 0.2rem solid $blue;
   }
   &__title {
     text-transform: capitalize;
   }
   &__link {
     text-decoration: none;
+    font-weight: bold;
+    color: $blue;
+    padding-right: 0.5rem;
   }
   &__info {
-    width: auto;
-    height: auto;
+    width: 35rem;
+    height: 20rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
   &__img {
-    border: 0.3rem solid $blue;
-    border-radius: 0.5rem;
+    border: 0.2rem solid $blue;
+    height: 15rem;
   }
   &__list {
     width: 15rem;
