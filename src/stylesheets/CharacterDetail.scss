@@ -3,25 +3,27 @@
 .modal {
   &__container {
     font-family: $mainFont;
+    background-image: url(../images/bg-portal.jpg);
+    background-size: cover;
     position: fixed;
     color: $darkGreen;
-    background-color: $yellow;
-    box-shadow: 5px 5px 5px $darkGreen;
+    box-shadow: 0px 0px 300px 100px $green;
     border-radius: 0.2rem;
   }
   &__header {
     display: flex;
     justify-content: flex-end;
-    border-bottom: 0.2rem solid $blue;
   }
   &__title {
     text-transform: capitalize;
+    font-size: 1.8rem;
   }
   &__link {
     text-decoration: none;
     font-weight: bold;
-    color: $blue;
+    color: $purple;
     padding-right: 0.5rem;
+    padding-top: 0.5rem;
   }
   &__info {
     width: 35rem;
@@ -30,15 +32,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
   }
   &__img {
-    border: 0.2rem solid $blue;
+    border-radius: 50%;
     height: 15rem;
   }
   &__list {
     width: 15rem;
   }
   &__list-item {
+    margin-top: 0.5rem;
     list-style: none;
     text-transform: capitalize;
   }

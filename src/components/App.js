@@ -20,9 +20,6 @@ const App = () => {
   };
 
   const filteredCharacters = characters.filter((character) => {
-    console.log(character);
-    console.log('filter', nameFilter);
-
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
