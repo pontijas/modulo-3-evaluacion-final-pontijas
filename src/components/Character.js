@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import '../stylesheets/App.scss';
 
 const Character = (props) => {
-  // console.log('recibo esto en caracter', props.character.id);
-
   return (
     <Link to={`/character/${props.character.id}`} className="card__link">
       <section className="card__container">

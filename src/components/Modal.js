@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import '../stylesheets/App.scss';
 
 const Modal = (props) => {
-  console.log('recibo esto en Modal', props.character.id);
-
   return (
     <div className="modal__container">
       <div className="modal__header">
