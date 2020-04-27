@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import CharacterList from './CharacterList';
 import Filter from './Filter';
+import FilterSelect from './FilterSelect';
 import CharacterDetail from './CharacterDetail';
 import getDataFromApi from '../services/getDataFromApi';
 import logo from '../images/logo.png';
@@ -10,18 +11,34 @@ import '../stylesheets/App.scss';
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all');
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
   const handleFilter = (data) => {
-    setNameFilter(data.value);
+    if (data.key === 'name') {
+      setNameFilter(data.value);
+    } else if (data.key === 'status') {
+      setStatusFilter(data.value);
+    }
   };
 
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
-  });
+  console.log('status', statusFilter);
+
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter((character) => {
+      console.log(character.status, statusFilter);
+      if (statusFilter === 'all') {
+        return true;
+      } else {
+        return character.status === statusFilter;
+      }
+    });
 
   const renderModal = (props) => {
     const matchId = props.match.params.id;
@@ -41,6 +58,7 @@ const App = () => {
         </header>
         <main className="main__container">
           <Filter handleFilter={handleFilter} />
+          <FilterSelect handleFilter={handleFilter} />
           <CharacterList characters={filteredCharacters} />
           <Switch>
             <Route path="/character/:id" render={renderModal} />
