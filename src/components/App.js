@@ -7,6 +7,7 @@ import CharacterDetail from './CharacterDetail';
 import getDataFromApi from '../services/getDataFromApi';
 import logo from '../images/logo.png';
 import '../stylesheets/App.scss';
+import FilterRadio from './FilterRadio';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -24,8 +25,6 @@ const App = () => {
       setStatusFilter(data.value);
     }
   };
-
-  console.log('status', statusFilter);
 
   const filteredCharacters = characters
     .filter((character) => {
@@ -59,6 +58,7 @@ const App = () => {
         <main className="main__container">
           <Filter handleFilter={handleFilter} />
           <FilterSelect handleFilter={handleFilter} />
+          <FilterRadio />
           <CharacterList characters={filteredCharacters} />
           <Switch>
             <Route path="/character/:id" render={renderModal} />
