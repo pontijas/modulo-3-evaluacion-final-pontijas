@@ -3,11 +3,11 @@ import { Route, Switch } from 'react-router-dom';
 import CharacterList from './CharacterList';
 import Filter from './Filter';
 import FilterSelect from './FilterSelect';
+import FilterRadio from './FilterRadio';
 import CharacterDetail from './CharacterDetail';
 import getDataFromApi from '../services/getDataFromApi';
 import logo from '../images/logo.png';
 import '../stylesheets/App.scss';
-import FilterRadio from './FilterRadio';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
