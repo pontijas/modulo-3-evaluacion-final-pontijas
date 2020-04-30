@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import CharacterList from './CharacterList';
-import Filter from './Filter';
-import FilterSelect from './FilterSelect';
-import FilterRadio from './FilterRadio';
+import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
 import getDataFromApi from '../services/getDataFromApi';
 import logo from '../images/logo.png';
@@ -56,9 +54,7 @@ const App = () => {
           <img src={logo} title="Rick y Morty" alt="Rick y Morty" className="header__logo"></img>
         </header>
         <main className="main__container">
-          <Filter handleFilter={handleFilter} />
-          <FilterSelect handleFilter={handleFilter} />
-          <FilterRadio />
+          <Filters handleFilter={handleFilter} />
           <CharacterList characters={filteredCharacters} />
           <Switch>
             <Route path="/character/:id" render={renderModal} />
