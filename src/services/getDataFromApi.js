@@ -2,8 +2,6 @@ const getDataFromApi = () => {
   return fetch('https://rickandmortyapi.com/api/character')
     .then((response) => response.json())
     .then((data) => {
-      // console.log('data', data);
-
       return data.results.map((character) => {
         return {
           id: character.id,
@@ -12,6 +10,7 @@ const getDataFromApi = () => {
           species: character.species,
           origin: character.origin.name,
           status: character.status,
+          location: character.location.name,
           episodes: character.episode.length,
         };
       });

@@ -16,7 +16,9 @@ const App = () => {
   }, []);
 
   const handleFilter = (data) => {
-    setNameFilter(data.value);
+    if (data.key === 'name') {
+      setNameFilter(data.value);
+    }
   };
 
   const filteredCharacters = characters.filter((character) => {
