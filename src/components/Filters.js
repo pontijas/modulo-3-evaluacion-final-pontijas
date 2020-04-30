@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterName from './FilterName';
 import FilterStatus from './FilterStatus';
-import '../stylesheets/Filter.scss';
+import '../stylesheets/Filters.scss';
 
 const Filters = (props) => {
   return (
