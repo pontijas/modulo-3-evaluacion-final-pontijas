@@ -29,7 +29,6 @@ const App = () => {
       return character.name.toUpperCase().includes(nameFilter.toUpperCase());
     })
     .filter((character) => {
-      console.log(character.status, statusFilter);
       if (statusFilter === 'all') {
         return true;
       } else {

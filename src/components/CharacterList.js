@@ -1,5 +1,6 @@
 import React from 'react';
 import Character from './Character';
+import FilterError from './FilterError';
 import '../stylesheets/CharacterList.scss';
 
 const CharacterList = (props) => {
@@ -14,6 +15,7 @@ const CharacterList = (props) => {
   return (
     <div>
       <ul className="list__container">{charactersInfo}</ul>
+      <FilterError />
     </div>
   );
 };
