@@ -4,6 +4,8 @@ import FilterError from './FilterError';
 import '../stylesheets/CharacterList.scss';
 
 const CharacterList = (props) => {
+  console.log('props', props.characters);
+
   const charactersInfo = props.characters.map((character) => {
     return (
       <li key={character.id} className="list__item">
@@ -12,10 +14,15 @@ const CharacterList = (props) => {
     );
   });
 
+  if (props.characters.length === 0) {
+    return <FilterError />;
+  }
+
+  console.log('character info', charactersInfo);
+
   return (
     <div>
       <ul className="list__container">{charactersInfo}</ul>
-      <FilterError />
     </div>
   );
 };

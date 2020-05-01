@@ -7,9 +7,7 @@ const FilterError = () => {
     <li className="warning__container">
       <img className="warning__img" src={image} alt="Not Found" />
       <section className="warning__info">
-        <p className="warning__text">
-          Oops! It seems that there's no character matching with <small>"{}"</small>.
-        </p>
+        <p className="warning__text">Oops! It seems that there's no character matching with "".</p>
       </section>
     </li>
   );
