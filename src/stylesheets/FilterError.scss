@@ -3,28 +3,45 @@
 .warning {
   &__container {
     overflow: hidden;
-    background-color: rgba(40, 148, 18, 0.4);
-    border: 0.35rem solid $yellow;
+    background-color: #2f311b;
+    border: 0.35rem solid $green;
     border-radius: 0.75rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 20rem;
   }
   &__img {
-    height: 15rem;
-  }
-  &__info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem;
+    height: 25rem;
   }
   &__text {
-    color: $darkGreen;
+    color: $yellow;
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: center;
+    padding-right: 3rem;
+    width: 10rem;
+  }
+}
+
+// responsive
+
+@media all and (max-width: 768px) {
+  .warning {
+    &__container {
+      width: 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__img {
+      height: 11rem;
+    }
+    &__text {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 0 2rem;
+    }
   }
 }

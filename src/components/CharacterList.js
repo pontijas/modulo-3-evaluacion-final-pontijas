@@ -18,8 +18,6 @@ const CharacterList = (props) => {
     return <FilterError />;
   }
 
-  console.log('character info', charactersInfo);
-
   return (
     <div>
       <ul className="list__container">{charactersInfo}</ul>
